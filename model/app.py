@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS to allow requests from the Chrome extension
 
 try:
-    with open("../final_model.sav", "rb") as model_file:
+    with open("final_model.sav", "rb") as model_file:
         model = pickle.load(model_file)
 except FileNotFoundError:
     model = None
